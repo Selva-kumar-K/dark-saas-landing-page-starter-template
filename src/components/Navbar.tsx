@@ -1,57 +1,27 @@
 import Image from "next/image";
-import Logo from ".././assets/images/logosaas.png";
-import Menu from ".././assets/icons/menu.svg";
+import React from "react";
+import logoSass from "../assets/images/logosaas.png";
+import MenuIcon from "../assets/icons/menu.svg";
 
 export const Navbar = () => {
   return (
-    <div className="bg-black">
-      <div className="flex items-center justify-between p-4">
+    <div className="px-4 bg-black py-[16px]">
+      <div className="flex justify-between items-center">
         <div className="relative">
-          <div className="w-12 h-14 bg-[linear-gradient(to_right,rgb(252,_214,_255,_.7),rgb(41,_216,_255,_.7),rgb(255,_253,_128,_.7),rgb(248,_154,_191,_.7),rgb(252,_214,_255,_.7))] blur-md"></div>
-
-          <div className="absolute top-0 bottom-0">
-            <Image src={Logo} alt="" className="rounded-lg h-12 w-12" />
-          </div>
+          <div className="absolute w-full top-2 bottom-0 bg-[linear-gradient(to_right,#F87BFF,#FB92CF,#FFDD9B,#C2F0B1,#2FD8FE)] blur-md"></div>
+          <Image src={logoSass} alt="logo" className="w-10 h-10 relative" />
+        </div>
+        <div className="border border-white border-opacity-30 h-10 w-10 inline-flex justify-center items-center rounded-lg sm:hidden hover:border-opacity-80">
+          <MenuIcon className="text-white" />
         </div>
 
-        <div className="border border-white border-opacity-30 rounded-lg p-2 sm:hidden">
-          <Menu className="text-white" />
-        </div>
-
-        <nav className="hidden sm:flex space-x-6 items-center">
-          <a
-            href=""
-            className="text-white opacity-60 hover:opacity-75 transition"
-          >
-            About
-          </a>
-          <a
-            href=""
-            className=" text-white opacity-60 hover:opacity-75 transition"
-          >
-            Features
-          </a>
-          <a
-            href=""
-            className=" text-white opacity-60 hover:opacity-75 transition"
-          >
-            Updates
-          </a>
-          <a
-            href=""
-            className=" text-white opacity-60 hover:opacity-75 transition"
-          >
-            Help
-          </a>
-          <a
-            href=""
-            className=" text-white opacity-60 hover:opacity-75 transition"
-          >
-            Customers
-          </a>
-          <button className="px-3 py-2 bg-white text-black rounded-lg ">
-            Get for free
-          </button>
+        <nav className="space-x-[24px] hover:text-opacity-30 items-center hidden sm:flex">
+          <a href="#" className="text-white hover:text-slate-300 transition">About</a>
+          <a href="#" className="text-white hover:text-slate-300 transition">Features</a>
+          <a href="#" className="text-white hover:text-slate-300 transition">Updates</a>
+          <a href="#" className="text-white hover:text-slate-300 transition">Help</a>
+          <a href="#" className="text-white hover:text-slate-300 transition">Customers</a>
+          <button className="px-[16px] bg-white rounded-lg py-[10px] hover:bg-slate-200 transition">Get for free</button>
         </nav>
       </div>
     </div>
