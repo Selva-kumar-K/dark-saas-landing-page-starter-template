@@ -19,12 +19,12 @@ const images = [
 export const LogoTicker = () => {
   return (
     <div className="bg-black text-white">
-      <div className="py-[72px]">
+      <div className="py-[72px] sm:py-24">
         <h1 className="text-white/70 text-center text-xl">
           Trusted by the world's most innovative teams
         </h1>
         <div className="pt-[36px]">
-          <div className="flex gap-[64px] overflow-hidden before:content-[''] after:content-[''] before:absolute after:absolute before:h-full after:h-full before:w-20 after:w-20 relative  before:left-0 after:right-0 before:top-0 after:top-0 before:bg-[linear-gradient(to_right,#000,rgb(0,0,0,0))] after:bg-[linear-gradient(to_right,#000,rgb(0,0,0,0))]">
+          <div className="flex gap-[64px] overflow-hidden before:content-[''] after:content-[''] before:absolute after:absolute before:h-full after:h-full before:w-20 after:w-20 relative  before:left-0 after:right-0 before:top-0 after:top-0 before:bg-[linear-gradient(to_right,#000,rgb(0,0,0,0))] after:bg-[linear-gradient(to_left,#000,rgb(0,0,0,0))]">
             {images.map(({ src, alt, key }) => (
               <Image
                 src={src}
